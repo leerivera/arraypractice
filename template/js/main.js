@@ -25,3 +25,7 @@ musketeers.forEach(element => {
 
 musketeers.pop("Aramis")
 console.log(musketeers)
+
+for(const element of musketeers){
+    console.log(element)
+}
