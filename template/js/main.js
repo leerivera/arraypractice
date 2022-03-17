@@ -8,7 +8,20 @@
 // Shows each array element using a for-of loop.
 
 let musketeers = ["Athos", "Porthos", "Aramis"]
+musketeers.push("D'Artagnan");
 
 for(let i = 0; i < musketeers.length; i++){
+ 
+    
     console.log(musketeers[i])
+
+  
 }
+
+musketeers.forEach(element => {
+    console.log(element)
+    
+});
+
+musketeers.pop("Aramis")
+console.log(musketeers)
