@@ -7,25 +7,35 @@
 // Remove poor Aramis.
 // Shows each array element using a for-of loop.
 
-let musketeers = ["Athos", "Porthos", "Aramis"]
-musketeers.push("D'Artagnan");
+// let musketeers = ["Athos", "Porthos", "Aramis"]
+// musketeers.push("D'Artagnan");
 
-for(let i = 0; i < musketeers.length; i++){
+// for(let i = 0; i < musketeers.length; i++){
  
     
-    console.log(musketeers[i])
+//     console.log(musketeers[i])
 
   
-}
+// }
 
-musketeers.forEach(element => {
-    console.log(element)
+// musketeers.forEach(element => {
+//     console.log(element)
     
-});
+// });
 
-musketeers.pop("Aramis")
-console.log(musketeers)
+// musketeers.pop("Aramis")
+// console.log(musketeers)
 
-for(const element of musketeers){
-    console.log(element)
+// for(const element of musketeers){
+//     console.log(element)
+// }
+
+let values = [3, 11, 7,2, 9, 10]
+
+let sum = 0;
+
+for(let i =0; i < values.length; i++){
+    sum = sum + values[i]
 }
+
+console.log(sum)
