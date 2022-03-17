@@ -40,8 +40,38 @@
 
 // console.log(sum)
 
-let values = [3, 11, 7,2, 9, 10]
+// let values = [3, 11, 7,2, 9, 10]
 
-let max = Math.max(...values);
+// let max = Math.max(...values);
 
-console.log(max)
+// console.log(max)
+
+// document.querySelector('#submit').addEventListener('click', run)
+
+// function run(word) {
+//     word = document.querySelector("#word").value;
+//     lastWord = "Stop"
+//     if (word === "") {
+//         console.log("tell me more")
+//     } else if (word === lastWord) {
+//         console.log("we done")
+//     }
+// }
+
+// let input = prompt("Tell me something");
+// let word = input.split(" ")
+
+// let wordArr = []
+
+// wordArr.push(word);
+
+
+
+let names = ''
+let nArray = []
+while(names !== 'stop'){
+    nmaes = prompt("tell me somthing");
+    nArray.push(names)
+}
+nArray.pop()
+console.log(nArray)
