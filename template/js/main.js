@@ -46,17 +46,23 @@
 
 // console.log(max)
 
-// document.querySelector('#submit').addEventListener('click', run)
+document.querySelector('#submit').addEventListener('click', run)
 
-// function run(word) {
-//     word = document.querySelector("#word").value;
-//     lastWord = "Stop"
-//     if (word === "") {
-//         console.log("tell me more")
-//     } else if (word === lastWord) {
-//         console.log("we done")
-//     }
-// }
+function run(word) {
+    word = document.querySelector("#word").value;
+    
+    let nArray = []
+    nArray.push(word)
+    
+    if(word !== "stop"){
+        word.value = "";
+        console.log(nArray)
+    }else{
+        console.log("we done son")
+    }
+   
+    console.log(nArray)
+}
 
 // let input = prompt("Tell me something");
 // let word = input.split(" ")
@@ -67,11 +73,11 @@
 
 
 
-let names = ''
-let nArray = []
-while(names !== 'stop'){
-    nmaes = prompt("tell me somthing");
-    nArray.push(names)
-}
-nArray.pop()
-console.log(nArray)
+// let names = ''
+// let nArray = []
+// while(names !== 'stop'){
+//     names = prompt("tell me somthing");
+//     nArray.push(names)
+// }
+// nArray.pop()
+// console.log(nArray)
