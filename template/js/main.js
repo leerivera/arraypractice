@@ -46,23 +46,23 @@
 
 // console.log(max)
 
-document.querySelector('#submit').addEventListener('click', run)
+// document.querySelector('#submit').addEventListener('click', run)
 
-function run(word) {
-    word = document.querySelector("#word").value;
+// function run(word) {
+//     word = document.querySelector("#word").value;
     
-    let nArray = []
-    nArray.push(word)
+//     let nArray = []
+//     nArray.push(word)
     
-    if(word !== "stop"){
-        word.value = "";
-        console.log(nArray)
-    }else{
-        console.log("we done son")
-    }
+//     if(word !== "stop"){
+//         word.value = "";
+//         console.log(nArray)
+//     }else{
+//         console.log("we done son")
+//     }
    
-    console.log(nArray)
-}
+//     console.log(nArray)
+// }
 
 // let input = prompt("Tell me something");
 // let word = input.split(" ")
@@ -81,3 +81,10 @@ function run(word) {
 // }
 // nArray.pop()
 // console.log(nArray)
+
+// slice 
+
+let arr = [7, 5, 98, 33, 90, 50, 75, 100, 86]
+
+console.log(arr.slice(2, 4, 7,9))
+console.log(arr.slice(-4, -1))
