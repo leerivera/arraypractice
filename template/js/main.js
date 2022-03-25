@@ -84,7 +84,10 @@
 
 // slice 
 
-let arr = [7, 5, 98, 33, 90, 50, 75, 100, 86]
+let arr = [7, 5, 98]
 
-console.log(arr.slice(2, 4, 7,9))
-console.log(arr.slice(-4, -1))
+// console.log(arr.slice(2, 4, 7,9))
+// console.log(arr.slice(-4, -1))
+arr.sort((a,b) => a - b)
+
+console.log(arr[2])
