@@ -84,10 +84,35 @@
 
 // slice 
 
-let arr = [7, 5, 98]
+// let arr = [7, 5, 98]
 
 // console.log(arr.slice(2, 4, 7,9))
 // console.log(arr.slice(-4, -1))
-arr.sort((a,b) => a - b)
+// arr.map((a) => a %7 === 0)
 
-console.log(arr[2])
+// console.log(arr)
+
+function rockPaperS(){
+    let random = Math.random()
+    if( random < .33){
+        return('scissors')
+    } else if ( random < .66){
+        return('rock')
+    } else{
+        return('paper')
+    }
+   
+
+}
+
+function checkWinner(choice){
+    let botChoice = rockPaperS()
+     if ( (choice === 'scissors' && botChoice === 'paper') || (choice === 'rock' && botChoice === 'scissors') || (choice === 'paper' && botChoice === 'rock')){
+         console.log('vous gangez')
+     } else if(choice === botChoice){
+         console.log('personne ne gangne')
+     } else {
+         console.log('tu as perdu')
+     }
+}
+checkWinner('rock')
