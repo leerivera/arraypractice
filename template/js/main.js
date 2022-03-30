@@ -92,45 +92,50 @@
 
 // console.log(arr)
 
-function rockPaperS(){
-    let random = Math.random()
-    if( random < .33){
-        return('scissors')
-    } else if ( random < .66){
-        return('rock')
-    } else{
-        return('paper')
-    }
+// function rockPaperS(){
+//     let random = Math.random()
+//     if( random < .33){
+//         return('scissors')
+//     } else if ( random < .66){
+//         return('rock')
+//     } else{
+//         return('paper')
+//     }
    
 
-}
+// }
 
-function checkWinner(choice){
-    let botChoice = rockPaperS()
-     if ( (choice === 'scissors' && botChoice === 'paper') || (choice === 'rock' && botChoice === 'scissors') || (choice === 'paper' && botChoice === 'rock')){
-         console.log('vous gangez')
-     } else if(choice === botChoice){
-         console.log('personne ne gangne')
-     } else {
-         console.log('tu as perdu')
-     }
-}
-checkWinner('rock')
+// function checkWinner(choice){
+//     let botChoice = rockPaperS()
+//      if ( (choice === 'scissors' && botChoice === 'paper') || (choice === 'rock' && botChoice === 'scissors') || (choice === 'paper' && botChoice === 'rock')){
+//          console.log('vous gangez')
+//      } else if(choice === botChoice){
+//          console.log('personne ne gangne')
+//      } else {
+//          console.log('tu as perdu')
+//      }
+// }
+// checkWinner('rock')
+busStops = [ [7,3], [10,8], [9,0]]
 
 
 var number = function(busStops){
     // Good Luck!
       let x = 0;
-      busStops.forEach(a => x = x + a[0] - a[1]);
-      return x
+       busStops.forEach(a => x = x + a[0] - a[1]);
+     
+    
+      return x;
+     
+      
   }
-
-  var number = function(busStops){
-    var totalPeople = 0;
-    for (var i=0; i<busStops.length; i++) {
-      totalPeople += busStops[i][0];
-      totalPeople -= busStops[i][1];
-    }
-    return totalPeople;
-  }
-  const number = (busStops) => busStops.reduce((rem, [on, off]) => rem + on - off, 0);
+console.log(number(busStops))
+//   var number = function(busStops){
+//     var totalPeople = 0;
+//     for (var i=0; i<busStops.length; i++) {
+//       totalPeople += busStops[i][0];
+//       totalPeople -= busStops[i][1];
+//     }
+//     return totalPeople;
+//   }
+//   const number = (busStops) => busStops.reduce((rem, [on, off]) => rem + on - off, 0);
