@@ -165,3 +165,17 @@ function sumDigits(number) {
   }
   return sum
 }
+
+
+function sumDigits(number) {
+  // Turn number into absolute value -> Stringify number -> Split at each character
+  var values = String(Math.abs(number)).split("");
+  // Instantiate variable to hold math result
+  var product = null;
+  // For each value, add the value to the product
+  for (var i = 0; i < values.length; i++) {
+    product = product + Number(values[i]);
+  }
+  // Return the product variable
+  return product;
+}
