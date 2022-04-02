@@ -119,23 +119,27 @@
 busStops = [ [7,3], [10,8], [9,0]]
 
 
-var number = function(busStops){
-    // Good Luck!
-      let x = 0;
-       busStops.forEach(a => x = x + a[0] - a[1]);
+// var number = function(busStops){
+//     // Good Luck!
+//       let x = 0;
+//        busStops.forEach(a => x = x + a[0] - a[1]);
      
     
-      return x;
+//       return x;
      
       
-  }
-console.log(number(busStops))
-//   var number = function(busStops){
-//     var totalPeople = 0;
-//     for (var i=0; i<busStops.length; i++) {
-//       totalPeople += busStops[i][0];
-//       totalPeople -= busStops[i][1];
-//     }
-//     return totalPeople;
 //   }
+// console.log(number(busStops))
+  var number = function(busStops){
+    var totalPeople = 0;
+    for (var i=0; i<busStops.length; i++) {
+      totalPeople += busStops[i][0];
+      totalPeople -= busStops[i][1];
+    }
+    return totalPeople;
+  }
+
+  console.log(number(busStops))
 //   const number = (busStops) => busStops.reduce((rem, [on, off]) => rem + on - off, 0);
+
+let time ="now"
