@@ -142,4 +142,14 @@ busStops = [ [7,3], [10,8], [9,0]]
   console.log(number(busStops))
 //   const number = (busStops) => busStops.reduce((rem, [on, off]) => rem + on - off, 0);
 
-let time ="now"
+function sumDigits(number) {
+  const absoluteNum = Math.abs(number);
+  const digitsArr = absoluteNum.toString().split(‘’);
+  let sum = 0;
+
+  digitsArr.map(num => {
+    sum += parseInt(num)
+  })
+	
+  return sum;
+}
