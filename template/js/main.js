@@ -216,3 +216,7 @@ function rpsls(pl1,pl2){
   const offset = (list.indexOf(pl2) - list.indexOf(pl1) + 5) % 5;
   return offset === 0 ? 'Draw!' : (offset % 2 === 0 ? 'Player 1 Won!' : 'Player 2 Won!')
 }
+
+function findNextSquare(sq){
+  return Math.sqrt(sq)%1===0 ? Math.pow(Math.sqrt(sq)+1,2) : -1
+}
