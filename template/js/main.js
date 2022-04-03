@@ -209,3 +209,10 @@ function rpsls(p1,p2){
   if (!player1 && !player2) { return 'Draw!' } 
   return `Player ${ player1?'1':'2'} Won!`
 }
+
+
+function rpsls(pl1,pl2){
+  const list = 'rock paper scissors spock lizard'.split(' ');
+  const offset = (list.indexOf(pl2) - list.indexOf(pl1) + 5) % 5;
+  return offset === 0 ? 'Draw!' : (offset % 2 === 0 ? 'Player 1 Won!' : 'Player 2 Won!')
+}
