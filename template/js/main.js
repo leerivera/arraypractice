@@ -130,93 +130,104 @@ busStops = [ [7,3], [10,8], [9,0]]
       
 //   }
 // console.log(number(busStops))
-  var number = function(busStops){
-    var totalPeople = 0;
-    for (var i=0; i<busStops.length; i++) {
-      totalPeople += busStops[i][0];
-      totalPeople -= busStops[i][1];
-    }
-    return totalPeople;
-  }
+//   var number = function(busStops){
+//     var totalPeople = 0;
+//     for (var i=0; i<busStops.length; i++) {
+//       totalPeople += busStops[i][0];
+//       totalPeople -= busStops[i][1];
+//     }
+//     return totalPeople;
+//   }
 
-  console.log(number(busStops))
-//   const number = (busStops) => busStops.reduce((rem, [on, off]) => rem + on - off, 0);
+//   console.log(number(busStops))
+// //   const number = (busStops) => busStops.reduce((rem, [on, off]) => rem + on - off, 0);
 
-function sumDigits(number) {
-  const absoluteNum = Math.abs(number);
-  const digitsArr = absoluteNum.toString().split(‘’);
-  let sum = 0;
+// function sumDigits(number) {
+//   const absoluteNum = Math.abs(number);
+//   const digitsArr = absoluteNum.toString().split(‘’);
+//   let sum = 0;
 
-  digitsArr.map(num => {
-    sum += parseInt(num)
-  })
+//   digitsArr.map(num => {
+//     sum += parseInt(num)
+//   })
 	
-  return sum;
-}
+//   return sum;
+// }
 
-function sumDigits(number) {
-  var i = 0;
-  var sum = 0;
-  number = Math.abs(number)
-  while(number != 0)
-  {
-      sum += number % 10
-      number = Math.floor(number/10)
-  }
-  return sum
-}
-
-
-function sumDigits(number) {
-  // Turn number into absolute value -> Stringify number -> Split at each character
-  var values = String(Math.abs(number)).split("");
-  // Instantiate variable to hold math result
-  var product = null;
-  // For each value, add the value to the product
-  for (var i = 0; i < values.length; i++) {
-    product = product + Number(values[i]);
-  }
-  // Return the product variable
-  return product;
-}
-
-const MATCH = {
-  scissors: ['paper', 'lizard'],
-  paper: ['rock', 'spock'],
-  rock: ['lizard', 'scissors'],
-  lizard: ['spock', 'paper'],
-  spock: ['scissors', 'rock'],
-};
+// function sumDigits(number) {
+//   var i = 0;
+//   var sum = 0;
+//   number = Math.abs(number)
+//   while(number != 0)
+//   {
+//       sum += number % 10
+//       number = Math.floor(number/10)
+//   }
+//   return sum
+// }
 
 
-function rpsls(pl1, pl2) {
-  return MATCH[pl1].indexOf(pl2) >= 0 ? 'Player 1 Won!' :
-         MATCH[pl2].indexOf(pl1) >= 0 ? 'Player 2 Won!' : 'Draw!';
-}
+// function sumDigits(number) {
+//   // Turn number into absolute value -> Stringify number -> Split at each character
+//   var values = String(Math.abs(number)).split("");
+//   // Instantiate variable to hold math result
+//   var product = null;
+//   // For each value, add the value to the product
+//   for (var i = 0; i < values.length; i++) {
+//     product = product + Number(values[i]);
+//   }
+//   // Return the product variable
+//   return product;
+// }
 
-function rpsls(p1,p2){
-  let wins = {
-    scissors:['paper','lizard'],
-    paper:['rock','spock'],
-    rock:['lizard','scissors'],
-    lizard:['spock','paper'],
-    spock:['scissors','rock']
-  }
+// const MATCH = {
+//   scissors: ['paper', 'lizard'],
+//   paper: ['rock', 'spock'],
+//   rock: ['lizard', 'scissors'],
+//   lizard: ['spock', 'paper'],
+//   spock: ['scissors', 'rock'],
+// };
+
+
+// function rpsls(pl1, pl2) {
+//   return MATCH[pl1].indexOf(pl2) >= 0 ? 'Player 1 Won!' :
+//          MATCH[pl2].indexOf(pl1) >= 0 ? 'Player 2 Won!' : 'Draw!';
+// }
+
+// function rpsls(p1,p2){
+//   let wins = {
+//     scissors:['paper','lizard'],
+//     paper:['rock','spock'],
+//     rock:['lizard','scissors'],
+//     lizard:['spock','paper'],
+//     spock:['scissors','rock']
+//   }
   
-  let player1 = wins[p1].includes(p2)
-  let player2 = wins[p2].includes(p1)
+//   let player1 = wins[p1].includes(p2)
+//   let player2 = wins[p2].includes(p1)
   
-  if (!player1 && !player2) { return 'Draw!' } 
-  return `Player ${ player1?'1':'2'} Won!`
+//   if (!player1 && !player2) { return 'Draw!' } 
+//   return `Player ${ player1?'1':'2'} Won!`
+// }
+
+
+// function rpsls(pl1,pl2){
+//   const list = 'rock paper scissors spock lizard'.split(' ');
+//   const offset = (list.indexOf(pl2) - list.indexOf(pl1) + 5) % 5;
+//   return offset === 0 ? 'Draw!' : (offset % 2 === 0 ? 'Player 1 Won!' : 'Player 2 Won!')
+// }
+
+// function findNextSquare(sq){
+//   return Math.sqrt(sq)%1===0 ? Math.pow(Math.sqrt(sq)+1,2) : -1
+// }
+
+function highLow(numbers){
+  numbers = numbers.split(' ').map(Number);
+  return Math.max.apply(0, numbers) + ' ' + Math.min.apply(0, numbers);
+  
 }
 
-
-function rpsls(pl1,pl2){
-  const list = 'rock paper scissors spock lizard'.split(' ');
-  const offset = (list.indexOf(pl2) - list.indexOf(pl1) + 5) % 5;
-  return offset === 0 ? 'Draw!' : (offset % 2 === 0 ? 'Player 1 Won!' : 'Player 2 Won!')
-}
-
-function findNextSquare(sq){
-  return Math.sqrt(sq)%1===0 ? Math.pow(Math.sqrt(sq)+1,2) : -1
+function highLow(numbers){
+  numbers = numbers.split(' ');
+  return `${Math.max(...numbers)} ${Math.min(...numbers)}`
 }
