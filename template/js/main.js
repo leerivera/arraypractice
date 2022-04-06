@@ -268,7 +268,16 @@ function mxdiflg(a1, a2) {
   return max;
 }
 
+// The every() method tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value.
+
 function isSortedAndHow(array) {
   return array.every((x,i)=>i==0||array[i]>=array[i-1])?'yes, ascending':
          array.every((x,i)=>i==0||array[i]<=array[i-1])?'yes, descending':'no'
 }
+
+const isBelowThreshold = (currentValue) => currentValue < 40;
+
+const array1 = [1, 30, 39, 29, 10, 13];
+
+console.log(array1.every(isBelowThreshold));
+// expected output: true
