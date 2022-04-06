@@ -267,3 +267,8 @@ function mxdiflg(a1, a2) {
       max = Math.max(max, Math.abs(A1.length - A2.length));
   return max;
 }
+
+function isSortedAndHow(array) {
+  return array.every((x,i)=>i==0||array[i]>=array[i-1])?'yes, ascending':
+         array.every((x,i)=>i==0||array[i]<=array[i-1])?'yes, descending':'no'
+}
